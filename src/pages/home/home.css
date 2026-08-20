@@ -1,0 +1,24 @@
+.home-opening-stack {
+  position: relative;
+}
+
+.home-opening-stack > .hero {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.home-opening-stack > .problem-section {
+  position: relative;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-opening-stack > .hero {
+    position: relative;
+  }
+
+  .problem-card {
+    transition: none;
+  }
+}

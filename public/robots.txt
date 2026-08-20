@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /administracao
+Disallow: /administracao/
+
+Sitemap: https://solucoes.auroraalveare.com.br/sitemap.xml
