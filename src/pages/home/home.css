@@ -1,10 +1,50 @@
+.home-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+
+  color: var(--aurora-branco);
+
+  background:
+    radial-gradient(
+      circle at 82% 10%,
+      rgba(166, 30, 53, 0.16) 0%,
+      rgba(122, 19, 38, 0.07) 24%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 12% 48%,
+      rgba(122, 19, 38, 0.12) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 84%,
+      rgba(166, 30, 53, 0.1) 0%,
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #050506 0%,
+      #060607 28%,
+      #080708 58%,
+      #070607 78%,
+      #050506 100%
+    );
+}
+
+.home-page > main,
+.home-page > .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
 .home-opening-stack {
   position: relative;
 }
 
 .home-opening-stack > .hero {
-  position: sticky;
-  top: 0;
+  position: relative;
+  top: auto;
   z-index: 1;
 }
 
@@ -13,11 +53,35 @@
   z-index: 2;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .home-opening-stack > .hero {
-    position: relative;
-  }
+.home-page .hero,
+.home-page .problem-section,
+.home-page .solutions-section,
+.home-page .services-deep-dive,
+.home-page .ecosystem-section,
+.home-page .final-cta,
+.home-page .contact-form-section,
+.home-page .site-footer {
+  background: transparent;
+}
 
+.home-page .problem-section {
+  border-radius: 0;
+  border-top: 0;
+  box-shadow: none;
+}
+
+.home-page .solutions-section,
+.home-page .final-cta,
+.home-page .contact-form-section,
+.home-page .site-footer {
+  border-top-color: transparent;
+}
+
+.home-page .problem-section::before {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
   .problem-card {
     transition: none;
   }
