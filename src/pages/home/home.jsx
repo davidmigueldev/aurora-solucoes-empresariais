@@ -12,7 +12,7 @@ import './home.css'
 
 function Home() {
   return (
-    <>
+    <div className="home-page">
       <Header />
 
       <main>
@@ -29,7 +29,7 @@ function Home() {
       </main>
 
       <SiteFooter />
-    </>
+    </div>
   )
 }
 
